@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JOSIAH DAUDI — Portfolio</title>
+  <meta name="description" content="Engineering, materials science, and web projects by Albarnas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;        /* slate-900 */
+      --panel:#0b1220;     /* deeper slate */
+      --text:#e5e7eb;      /* light */
+      --muted:#94a3b8;     /* slate-400 */
+      --brand:#22d3ee;     /* cyan-400 */
+      --accent:#a78bfa;    /* violet-400 */
+      --card:#111827;      /* gray-900 */
+      --ring:rgba(34,211,238,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: radial-gradient(1200px 600px at 10% -10%, #0b1327 0%, #0f172a 55%, #0a1020 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1024px; margin:0 auto; padding:24px}
+    header{
+      position:sticky; top:0; backdrop-filter:saturate(150%) blur(6px);
+      background:linear-gradient(180deg, rgba(15,23,42,.8), rgba(15,23,42,.6));
+      border-bottom:1px solid rgba(148,163,184,.15);
+      z-index:50;
+    }
+    nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{
+      display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px
+    }
+    .dot{width:10px; height:10px; border-radius:50%; background:var(--brand); box-shadow:0 0 24px var(--ring)}
+    .nav-links{display:flex; gap:16px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px; padding:10px 14px;
+      border:1px solid rgba(148,163,184,.25); border-radius:10px; color:var(--text);
+      background:linear-gradient(180deg, rgba(17,24,39,.8), rgba(17,24,39,.6));
+    }
+    .btn:hover{border-color:rgba(34,211,238,.6); box-shadow:0 0 0 6px var(--ring)}
+
+    .hero{
+      display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; padding:36px 0 24px;
+    }
+    .tag{display:inline-block; font-size:.85rem; color:var(--muted); border:1px solid rgba(148,163,184,.25);
+      padding:6px 10px; border-radius:999px; background:rgba(17,24,39,.6)}
+    h1{font-size:clamp(28px,4.5vw,44px); line-height:1.15; margin:14px 0 10px}
+    .lead{color:var(--muted); font-size:1.05rem}
+    .hero-card{
+      border:1px solid rgba(148,163,184,.15); border-radius:16px; padding:18px;
+      background:linear-gradient(180deg, rgba(17,24,39,.65), rgba(17,24,39,.45));
+    }
+    .grid{display:grid; gap:16px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid-3{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:640px){ .grid-3,.grid-2{grid-template-columns:1fr} }
+
+    section{margin:28px 0; padding:22px; border-radius:16px; border:1px solid rgba(148,163,184,.15);
+      background:linear-gradient(180deg, rgba(15,23,42,.55), rgba(15,23,42,.35))}
+    section h2{margin:0 0 10px; font-size:1.4rem}
+    .muted{color:var(--muted)}
+    .card{
+      border:1px solid rgba(148,163,184,.18); border-radius:14px; background:var(--card);
+      padding:14px; display:flex; flex-direction:column; gap:8px;
+    }
+    .chip{
+      display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px;
+      background:rgba(167,139,250,.12); color:#ddd; border:1px solid rgba(167,139,250,.3); font-size:.9rem;
+    }
+    .kicker{font-size:.9rem; color:var(--muted)}
+    ul.clean{list-style:none; padding:0; margin:0; display:grid; gap:8px}
+    footer{padding:28px 0; color:var(--muted); text-align:center}
+    .split{display:flex; gap:16px; align-items:center; flex-wrap:wrap}
+    .small{font-size:.9rem}
+    .social{display:flex; gap:10px}
+    .social a{border:1px solid rgba(148,163,184,.25); padding:8px 10px; border-radius:10px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <span class="dot"></span>
+          <span>JOSIAH DAUDI</span>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="about">
+      <div>
+        <span class="tag">Machakos, Kenya • Engineering + Web</span>
+        <h1>Engineering precision meets playful creativity.</h1>
+        <p class="lead">I’m Albarnas, a methodical, curious builder who blends materials science, electronics, and clean web apps. I love turning complex ideas into clear, working systems.</p>
+        <div class="split">
+          <a class="btn" href="#projects">View projects</a>
+          <a class="btn" href="#contact">Work with me</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="grid grid-2">
+          <div class="card">
+            <strong>Focus</strong>
+            <span class="kicker">Materials, circuits, web UI</span>
+          </div>
+          <div class="card">
+            <strong>Availability</strong>
+            <span class="kicker">Freelance & collaborations</span>
+          </div>
+          <div class="card">
+            <strong>Preferred stack</strong>
+            <span class="kicker">HTML/CSS/JS • Python • Arduino</span>
+          </div>
+          <div class="card">
+            <strong>Current theme</strong>
+            <span class="kicker">Phase diagrams → product design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <p class="muted small">A mix of engineering rigor and developer pragmatism.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="chip">Electronics</span>
+          <ul class="clean">
+            <li>• Circuit analysis, Thevenin/Norton, superposition</li>
+            <li>• Prototyping with Arduino and sensors</li>
+            <li>• PCB basics and debugging workflows</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="chip">Materials science</span>
+          <ul class="clean">
+            <li>• Crystal structures, alloy properties</li>
+            <li>• Phase diagrams and lever rule</li>
+            <li>• Mechanical testing fundamentals</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="chip">Web development</span>
+          <ul class="clean">
+            <li>• Semantic HTML, responsive CSS</li>
+            <li>• Vanilla JS components</li>
+            <li>• Data-driven UI and templates</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="muted small">Selected work and experiments.</p>
+      <div class="grid grid-3">
+        <article class="card">
+          <strong>Phase diagram visualizer</strong>
+          <p class="kicker">Interactive lever rule calculator with clean plots.</p>
+          <ul class="clean">
+            <li>• Dynamic tie-lines and fraction outputs</li>
+            <li>• Export-ready summaries</li>
+          </ul>
+          <div class="split">
+            <a href="#" class="btn">Live demo</a>
+            <a href="#" class="btn">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <strong>Smart sensor dashboard</strong>
+          <p class="kicker">Arduino + JS dashboard for real-time readings.</p>
+          <ul class="clean">
+            <li>• Filtering, alerts, and data logging</li>
+            <li>• Responsive cards and charts</li>
+          </ul>
+          <div class="split">
+            <a href="#" class="btn">Live demo</a>
+            <a href="#" class="btn">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <strong>Product grid template</strong>
+          <p class="kicker">Minimal HTML/CSS/JS for storefronts.</p>
+          <ul class="clean">
+            <li>• Sort, filter, and quick view</li>
+            <li>• Accessible and fast</li>
+          </ul>
+          <div class="split">
+            <a href="#" class="btn">Live demo</a>
+            <a href="#" class="btn">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="muted small">Let’s build something precise and playful.</p>
+      <div class="grid grid-2">
+        <div class="card">
+          <strong>Message me</strong>
+          <form action="#" method="post">
+            <label class="small">Name</label>
+            <input type="text" name="name" placeholder="Your name" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(148,163,184,.25);background:#0b1320;color:#e5e7eb;margin:6px 0;">
+            <label class="small">Email</label>
+            <input type="email" name="email" placeholder="you@example.com" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(148,163,184,.25);background:#0b1320;color:#e5e7eb;margin:6px 0;">
+            <label class="small">Message</label>
+            <textarea name="message" rows="4" placeholder="What would you like to build?" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(148,163,184,.25);background:#0b1320;color:#e5e7eb;margin:6px 0;"></textarea>
+            <button class="btn" type="submit">Send</button>
+          </form>
+        </div>
+        <div class="card">
+          <strong>Elsewhere</strong>
+          <div class="social">
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#" aria-label="Email">Email</a>
+          </div>
+          <p class="small muted">Based in Machakos County • Open to remote work.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="y"></span> DAUDI. Built with semantic HTML and love for clean engineering.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
